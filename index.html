@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Different selectors in css</title>
     <style>
-        div{
+       /*   element selector syntax
+               element{
+                  property:value;
+               }
+       */  
+       div{
             width: 200px;
             height: 200px;
             background: red;
         }
+
+        /*    id selector syntax
+
+            element#id{
+                property:value;
+            }
+        */
 
         span#a1{
             display: block;
@@ -17,12 +29,26 @@
             height: 200px;
             background: green;
         }
+        
+        /*  class selector syntax
+
+            element.id{
+                property:value;
+            }
+        */
         span.b1{
             display: block;
             width: 200px;
             height: 200px;
             background: blue;
         }
+
+        /* attribute selector syntax
+
+           element[name="value"]{
+               property:value;
+           }
+        */
 
         a[href="www.amazon.com"]{
             width: 200px;
@@ -31,17 +57,45 @@
                      
         }
 
+        /*  universal selector syntax
+         
+            *{
+                property:value;
+            }
+        */
+
         *{
             border: 10px solid black;
         }
+
+        /*  Grougp/combinational selector syntax
+
+            element1,element2,element3...{
+                property:value;
+            }
+        */
 
         div,span#a1,span.b1,a[href="www.amazon.com"]{
             display: inline-block;
         }
 
+        /* pesudo element selector syntax
+
+            element::selector{
+                property:value;
+            }
+        */
+
         h1::after{
             content: url(https://media.tenor.com/IYI9fQ41PWQAAAAj/yolande.gif);
         }
+
+        /* pesudo class selector syntax
+
+           element#id:selector{
+              property:value;
+           }
+        */
 
         div#c1:hover{
             width: 200px;
